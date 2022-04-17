@@ -13,6 +13,6 @@ enum comparison
 };
 
 
-void cmask_comp_char(const char *, int, enum comparison, int *, int *);
+void cmask_comp_int32(const char *, int, enum comparison, int *, int *);
 
 #endif
