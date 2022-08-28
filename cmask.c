@@ -725,8 +725,8 @@ int pack_indices_avx2(int *results, int length)
 __m256i pack_left_helper_avx2(__m256i results, __m256i indices)
 {
 	__m256i packed;
-	int included = 0;
-	int excluded = 0;
+	int included = 0; // Number of valid indices.
+	int excluded = 0; // Number of invalid indices.
 	
 	// Create permutation indices.
 	__m256i permuteidx;
