@@ -3,7 +3,7 @@
 
 #define INT32_PER_AVX2_REG 8
 #define ALL_BITS 0xFFFFFFFFFFFFFFFF
-#define BITS_PER_INT 32
+#define BITS_PER_INT32 32
 #define COMPARE(a, operator, b) ((a) (operator) (b))
 
 //----------------------------------------------------------------------------
@@ -767,7 +767,7 @@ int write_random_data_to_file(int *values, int length, const char *filename)
         for (i = 0; i < length; i++) {
             temp = 0;
             
-            for (j = 0; j < BITS_PER_INT; j++) {
+            for (j = 0; j < BITS_PER_INT32; j++) {
                 temp += (rand() % 2) * (2 << j)
             }
             
